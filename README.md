@@ -32,3 +32,25 @@ Fim - só abrir a URL...
 Apontar diretamente para a pasta, pois não há index.html nas pastas.
 
 https://d2pxua7zw5gx7n.cloudfront.net/opendatasus/mg/covid-vac-mg-1.csv
+
+### Arquivo de população
+
+Cabeçalho
+UF;CODUF;CODMUNIC;NOMEMUNICÍPIO;POPULAÇÃOESTIMADA
+
+Arquivo POP2021_20230710.csv
+
+```sql
+CREATE TABLE "oficina"."popestimada" WITH (
+  partitioned_by = ARRAY['uf'],
+  format = 'PARQUET',
+  external_location ='s3://oficina-0973/ibge/popestimada/'
+) AS
+SELECT 
+ coduf, 
+ codmunic, 
+ nomemunic, 
+ cast (popestimada as bigint) as popestimada,
+ uf
+FROM "oficina"."populacao" WHERE UF !='UF';
+```
