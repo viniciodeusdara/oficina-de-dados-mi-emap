@@ -1,0 +1,36 @@
+{
+  "name": "Oficina de Dados MI EMAP",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.jupyter-keymap",
+        "ms-toolsai.jupyter-renderers",
+        "James-Yu.latex-workshop"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": true,
+        "python.formatting.autopep8Path": "/usr/local/bin/autopep8",
+        "python.formatting.blackPath": "/usr/local/bin/black",
+        "python.formatting.yapfPath": "/usr/local/bin/yapf",
+        "python.linting.banditPath": "/usr/local/bin/bandit",
+        "python.linting.flake8Path": "/usr/local/bin/flake8",
+        "python.linting.mypyPath": "/usr/local/bin/mypy",
+        "python.linting.pycodestylePath": "/usr/local/bin/pycodestyle",
+        "python.linting.pydocstylePath": "/usr/local/bin/pydocstyle",
+        "python.linting.pylintPath": "/usr/local/bin/pylint",
+        "jupyter.jupyterServerType": "local"
+      }
+    }
+  },
+  "forwardPorts": [8888],
+  "postCreateCommand": "pip install --no-cache-dir -r .devcontainer/requirements.txt",
+  "remoteUser": "vscode"
+}

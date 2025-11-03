@@ -1,6 +1,21 @@
 # oficina-de-dados-mi-emap
 
- Oficina de dados de MI @EMAP a ser aplicada como parte de avaliação individual.
+Oficina de dados de MI @EMAP a ser aplicada como parte de avaliação individual.
+
+## 🚀 Começando com GitHub Codespaces
+
+Este repositório está configurado para rodar no GitHub Codespaces com todos os recursos necessários:
+- Python 3.10 com Jupyter Notebook/Lab
+- Bibliotecas para análise de dados (pandas, matplotlib, boto3, PyAthena)
+- LaTeX completo para produção de artigos acadêmicos
+- AWS CLI para integração com serviços AWS
+
+### Como usar:
+1. Clique no botão verde **"Code"** → **"Codespaces"** → **"Create codespace"**
+2. Aguarde a criação do ambiente (alguns minutos)
+3. Abra o notebook `oficina-dados-mi-aws-jupyper.ipynb` e comece a trabalhar!
+
+📖 Para mais detalhes, veja [.devcontainer/README.md](.devcontainer/README.md)
 
 ## Como deixar um bucket para acesso publico
 
