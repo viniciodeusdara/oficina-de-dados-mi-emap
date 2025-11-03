@@ -18,3 +18,9 @@ xlrd>=2.0.1
 # Utilities
 requests>=2.31.0
 python-dotenv>=1.0.0
+
+# Code quality tools (for VS Code integration)
+pylint>=3.0.0
+autopep8>=2.0.0
+pycodestyle>=2.11.0
+

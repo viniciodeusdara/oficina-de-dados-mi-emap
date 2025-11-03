@@ -30,8 +30,7 @@ RUN pip install --no-cache-dir \
     jupyter \
     jupyterlab \
     notebook \
-    ipywidgets \
-    jupyterlab-vim
+    ipywidgets
 
 # Create workspace directory
 RUN mkdir -p /workspace
